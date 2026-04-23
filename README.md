@@ -1,141 +1,122 @@
 # 💊 Projeto Remédio API
 
-Este projeto é uma API desenvolvida em Node.js para gerenciamento de medicamentos, usuários e controle de acesso com autenticação segura.
+Uma API robusta desenvolvida em **Node.js** para o gerenciamento centralizado de medicamentos e controle de usuários. O sistema conta com autenticação segura e diferentes níveis de acesso.
 
 ---
 
-## 📌 Tecnologias utilizadas
+## 🚀 Funcionalidades
 
-* Node.js
-* Express
-* MySQL
-* JWT (JSON Web Token)
-* Bcrypt
-* CORS
+- 🔐 **Autenticação Segura**: Login com JWT (JSON Web Token)  
+- 🔒 **Segurança de Dados**: Criptografia de senhas com Bcrypt  
+- 👥 **Controle de Acesso**: Sistema de perfis com hierarquia  
+- 🗄️ **Persistência**: Integração com MySQL usando pool de conexões  
+- 🌐 **Arquitetura RESTful**: Estrutura escalável e organizada  
+
+---
+
+## 🛠️ Tecnologias e Ferramentas
+
+- **Node.js**
+- **Express**
+- **MySQL**
+- **JWT**
+- **Bcrypt**
+- **CORS**
 
 ---
 
 ## 📂 Estrutura do Projeto
 
 ```
-REMEDIO PROJETO/
-│── server.js               # Arquivo principal da API
-│── package.json           # Dependências do projeto
-│── banco_de_dados_remedio.sql  # Script do banco de dados
-│── node_modules/          # Dependências instaladas
+REMEDIO-PROJETO/
+├── server.js
+├── package.json
+├── banco_de_dados_remedio.sql
+└── .gitignore
 ```
 
 ---
 
-## ⚙️ Funcionalidades
+## ⚙️ Configuração e Instalação
 
-* 🔐 Autenticação de usuários com JWT
-* 🔑 Criptografia de senha com Bcrypt
-* 👤 Controle de acesso por perfil (hierarquia de usuários)
-* 📦 Conexão com banco de dados MySQL
-* 🌐 API REST para gerenciamento de dados
-
----
-
-## 🛠️ Como rodar o projeto
-
-### 1. Clonar o repositório
+### 1. Clonar e instalar dependências
 
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
-```
-
-### 2. Entrar na pasta
-
-```bash
 cd REMEDIO-PROJETO
-```
-
-### 3. Instalar dependências
-
-```bash
 npm install
 ```
 
-### 4. Configurar o banco de dados
+---
 
-* Abra o MySQL
-* Execute o arquivo:
+### 2. Configurar o banco de dados
 
+- Certifique-se de que o MySQL está rodando  
+- Execute o script:
 ```
 banco_de_dados_remedio.sql
 ```
 
 ---
 
-### 5. Configurar variáveis de ambiente (opcional)
+### 3. Variáveis de ambiente
 
-Você pode criar um arquivo `.env`:
+Crie um arquivo `.env` na raiz:
 
-```env
+```
 DB_HOST=localhost
-DB_USER=root
-DB_PASS=1234
+DB_USER=seu_usuario
+DB_PASS=sua_senha
 DB_NAME=remedio_db
-JWT_SECRET=segredo_super_secreto
+JWT_SECRET=sua_chave_mestra
 ```
 
 ---
 
-### 6. Rodar o servidor
+### 4. Executar o projeto
 
 ```bash
 npm start
 ```
 
-Servidor rodando em:
-
-```
-http://localhost:3000
-```
+A API estará disponível em:  
+👉 http://localhost:3000
 
 ---
 
 ## 🔐 Autenticação
 
-A API utiliza JWT para autenticação.
-
-Envie o token no header:
+Para acessar rotas protegidas, envie o token no header:
 
 ```
-Authorization: Bearer SEU_TOKEN
+Authorization: Bearer SEU_TOKEN_AQUI
 ```
 
 ---
 
-## 📊 Banco de Dados
+## 📌 Boas práticas
 
-O projeto utiliza MySQL com pool de conexões para melhor desempenho e escalabilidade.
-
----
-
-## 📌 Observações
-
-* Em produção, **NÃO use senhas padrão** no banco
-* Sempre utilize variáveis de ambiente para segurança
-* O `node_modules` não deve ser enviado para o GitHub (use `.gitignore`)
+- ❌ Nunca exponha senhas ou JWT em repositórios públicos  
+- ✅ Use variáveis de ambiente (.env)  
+- ✅ Mantenha o `node_modules` no `.gitignore`  
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
-Matheus de Souza Soares - RA: N064943
-Henrique Barros - RA: r010082
-Leonardo Diogo Buzelin Julio - RA: G790GB9
-Luan Martiniano Rocha - RA: R029EB8
+- Matheus de Souza Soares - RA: N064943  
+- Henrique Barros - RA: r010082  
+- Leonardo Diogo Buzelin Julio - RA: G790GB9  
+- Luan Martiniano Rocha - RA: R029EB8  
 
 ---
 
-## 👨‍🏫 Orientação / Professor
+## 👨‍🏫 Orientação
 
 Andre Muniz (@agdelira)
 
 ---
+
 ## 📄 Licença
 
-Este projeto está sob a licença ISC.
+Este projeto está sob a licença **ISC**
