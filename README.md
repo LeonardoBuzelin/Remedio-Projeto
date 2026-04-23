@@ -113,8 +113,7 @@ Authorization: Bearer SEU_TOKEN_AQUI
 
 ## 👨‍🏫 Orientação
 
-Andre Muniz (@agdelira)
-
+Andre Muniz ([@agdelira](https://github.com/agdelira))
 ---
 
 ## 📄 Licença
